@@ -36,6 +36,6 @@ public static void main(String[] args) {
 	ApplicationContext ctx  =  new FileSystemXmlApplicationContext("src/main/java/com/spring/cfg/applicationContext.xml");
 	Student student = ctx.getBean("studentbean", Student.class);
 	student.displayInfo();
-	
+	//test commit
 }
 }
