@@ -37,5 +37,6 @@ public static void main(String[] args) {
 	Student student = ctx.getBean("studentbean", Student.class);
 	student.displayInfo();
 	//test commit
+	//commit by sree
 }
 }
