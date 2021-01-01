@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+	<!-- Constructor Injection start -->
+
+	<!-- with Order or Sequence -->
+	<bean id="empBean1" class="com.spring.beans.Employee">
+		<constructor-arg value="1" />
+		<constructor-arg value="SUNIL" />
+		<constructor-arg value="Health" />
+		<constructor-arg value="41543.00" />
+	</bean>
+	<!-- With Argument Data Type -->
+	<bean id="empBean2" class="com.spring.beans.Employee">
+		<constructor-arg value="SUNIL" type="String" />
+		<constructor-arg value="1" type="int" />
+		<constructor-arg value="Health" type="String" />
+		<constructor-arg value="41543.00" type="Double" />
+	</bean>
+	<!-- With Argument index -->
+	<bean id="empBean3" class="com.spring.beans.Employee">
+		<constructor-arg value="Health" index="2" />
+		<constructor-arg value="1" index="0" />
+		<constructor-arg value="41543.00" type="Double" index="3" />
+		<constructor-arg value="SUNIL" index="1" />
+	</bean>
+	<!-- Constructor Injection End -->
+
+	<!-- With Mixed -->
+	<bean id="empBean6" class="com.spring.beans.Employee">
+		<constructor-arg value="1" />
+		<constructor-arg value="SUNIL" type="String" />
+		<constructor-arg value="Health" index="2" />
+		<constructor-arg value="41543.00" index="3" />
+	</bean>
+	<!-- Constructor Mixed End -->
+
+
+
+	<!-- Setter Injection start -->
+	<bean id="empBean4" class="com.spring.beans.Employee">
+		<property name="empId" value="1" />
+		<property name="empName" value="SUNIL" />
+		<property name="dept" value="Health" />
+		<property name="salary" value="41543.00" />
+	</bean>
+
+	<!-- Setter Injection End -->
+
+
+	<!-- Constructor and Setter Combination -->
+	<bean id="empBean5" class="com.spring.beans.Employee">
+
+		<property name="empId" value="2" />
+		<property name="empName" value="SUNIL" />
+		<property name="dept" value="Accounts" />
+		<property name="salary" value="62987.00" />
+
+
+		<constructor-arg value="1" />
+		<constructor-arg value="SUNIL" />
+		<constructor-arg value="Health" />
+		<constructor-arg value="41543.00" />
+	</bean>
+
+
+</beans>

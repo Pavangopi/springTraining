@@ -1,4 +1,4 @@
-package com.spring.core;
+package com.spring.beans;
 
 public class Student {
 private String name;
