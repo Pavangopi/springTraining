@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+	<!-- Constructor Injection start -->
+
+	<!-- Singleton Scope-->
+	<bean id="empBean" class="com.spring.beans.Employee" scope="singleton">
+
+	</bean>
+	<!-- ProtoType Scope -->
+	<bean id="studentBean" class="com.spring.beans.Student" scope="prototype">
+
+	</bean>
+
+
+</beans>
