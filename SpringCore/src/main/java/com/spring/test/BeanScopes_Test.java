@@ -33,7 +33,17 @@ public class BeanScopes_Test {
 		System.out.println();
 		System.out.println("student1==student2:::"+(student1==student2));
 		
-
-
+		/*Single Ton Bean
+		 * when you define a bean definition and it is scoped as a singleton, the Spring
+		 * IoC container creates exactly one instance of the object defined by that bean
+		 * definition. This single instance is stored in a cache of such singleton
+		 * beans, and all subsequent requests and references for that named bean return
+		 * the cached object.
+		 * 
+		 * Singleton beans with prototype-bean dependencies:
+		 * You cannot dependency-inject a prototype-scoped bean into your singleton bean, because that 
+		 * injection occurs only once, when the Spring container is instantiating the singleton bean and resolving 
+		 * and injecting its dependencies. 
+		 */
 	}
 }

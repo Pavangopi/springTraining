@@ -18,4 +18,12 @@ public class Student {
 	public String toString() {
 		return "Student [name=" + name + "]";
 	}
+	
+	public void init() {
+		System.out.println("Bean is going to be initialized in Student ");
+	}
+	
+	public void dispose() {
+		System.out.println("Spring IoC Container destroying the bean in Student..");
+	}
 }
