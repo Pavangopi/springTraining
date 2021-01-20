@@ -41,3 +41,11 @@ public class Tv {
  * will be interpreted as the bean name to be injected. You can say, it follows
  *  autowiring by-name.
  */
+
+/*Note::
+ * JSR 330’s @Inject annotation can be used in place of Spring’s @Autowired
+ * annotation in the examples below
+ * As of Spring Framework 4.3, the @Autowired constructor is no longer necessary if the target bean only 
+ * defines one constructor. If several constructors are available, at least one must be annotated 
+ * to teach the container which one it has to use.
+ */

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -10,19 +9,19 @@
 
 <context:annotation-config></context:annotation-config>
 
-<bean id="table" class="com.spring.beans.Table"></bean>
+<context:component-scan base-package="com.spring.beans"></context:component-scan>
 
-<bean id="chair" class="com.spring.beans.Chair">
-<property name="name" value="nilkamal"></property>
+<bean id="carOwner" class="com.spring.beans.CarOwner">
+<property name="name" value="Sreekanth"></property>
 </bean>
 
-<bean id="chair1" class="com.spring.beans.Chair">
-<!--Xml based approach  -->
-<!-- <qualifier value="chair1"></qualifier> -->
-<property name="name" value="pepperfry"></property>
+<bean id="tesla" class="com.spring.beans.Tesla" primary="true">
+<property name="name" value="tesla car"></property>
+<property name="price" value="250000"></property>
 </bean>
-<!--  don't prefer this example in interview look HpLaptop bean as a part of interview purpose.-->
 
-
+<bean id="kia" class="com.spring.beans.Kia">
+<property name="name" value="kia car"></property>
+<property name="price" value="25000"></property></bean>
 
 </beans>

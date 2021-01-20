@@ -25,6 +25,18 @@ for context:annotation-config which will help @Autowired annotation works.  -->
 <property name="channelno" value="1405"></property>
 </bean>
 
+<bean id="cart" class="com.spring.beans.Cart">
+<property name="id" value="1"></property>
+</bean>
 
+<bean id="items1" class="com.spring.beans.Items">
+<property name="id" value="100"></property>
+<property name="name" value="opporeno2F"></property>
+</bean>
+
+<bean id="items2" class="com.spring.beans.Items">
+<property name="id" value="200"></property>
+<property name="name" value="KIA"></property>
+</bean>
 
 </beans>

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Table {
 
-	@Autowired(required = false)
+	@Autowired
 	@Qualifier("chair1")
 	//If we comment @Qualifier annotation still it will not give any error because it internally using Autowiring
 	//by name. So as per name concept it will give nilkamal as result because of property name chair if
@@ -22,7 +22,7 @@ public class Table {
 
 	@Override
 	public String toString() {
-		return "Table [chair=" + chair + "]";
+		return "Table [chair=" + chair.getName() + "]";
 	}
 	
 }

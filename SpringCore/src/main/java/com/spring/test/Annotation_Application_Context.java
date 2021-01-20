@@ -22,3 +22,8 @@ public class Annotation_Application_Context {
 	
 	}
 }
+/*Note::
+ * Annotation injection is performed before XML injection, thus the latter
+ * configuration will override the former for properties wired through both
+ * approaches.
+ */

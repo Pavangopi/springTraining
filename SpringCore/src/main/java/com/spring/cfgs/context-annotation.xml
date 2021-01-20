@@ -17,3 +17,18 @@
 
 
 </beans>
+
+<!--   <context:annotation-config> is used to activate annotations in beans already registered in the
+    application context(no matter if they were defined with XML or by package scanning).
+    
+    <context:annotation-config/> only looks for annotations on beans in the same application context 
+    in which it is defined. This means that, if you put <context:annotation-config/>
+    in a WebApplicationContext for a DispatcherServlet, it only checks for @Autowired beans in your controllers,
+    and not your services.
+    
+    context-annotation-config searches for annotations like @Required and @Autowired, as well as JSR 
+ 250's @PostConstruct, @PreDestroy and @Resource (if available), JAX-WS's @WebServiceRef (if available), EJB3's 
+ @EJB (if available), and JPA's @PersistenceContext and @PersistenceUnit (if available)
+    
+	<context:component-scan> can also do what <context:annotation-config> does but <context:component-scan> 
+also scans packages to find and register beans within the application context. -->

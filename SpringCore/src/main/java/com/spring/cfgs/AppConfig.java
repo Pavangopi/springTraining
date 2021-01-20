@@ -3,9 +3,13 @@ package com.spring.cfgs;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
 import com.spring.beans.Battery;
+import com.spring.beans.Dell;
 import com.spring.beans.HpLaptop;
 import com.spring.beans.I3Processor;
+import com.spring.beans.I5Processor;
 import com.spring.interfaces.Laptop;
 import com.spring.interfaces.Processor;
 
@@ -19,6 +23,7 @@ So Spring container can process the class and generate Spring Beans to be used i
 public class AppConfig {
 
 	@Bean
+	@Primary
 	public Laptop hpLaptop() {
 	
 		return new HpLaptop();
@@ -32,5 +37,16 @@ public class AppConfig {
 	@Qualifier("i3Processor")
 	public Processor processor() {
 		return new I3Processor();
+	}
+	
+	@Bean(name = "processorI5")
+	public Processor i5Processor() {
+		return new I5Processor();
+	}
+	
+	@Bean
+	public Laptop dell() {
+	
+		return new Dell();
 	}
 }
