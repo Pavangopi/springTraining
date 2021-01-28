@@ -22,7 +22,7 @@ So Spring container can process the class and generate Spring Beans to be used i
 @Configuration
 public class AppConfig {
 
-	@Bean
+	@Bean(initMethod = "init")
 	@Primary
 	public Laptop hpLaptop() {
 	

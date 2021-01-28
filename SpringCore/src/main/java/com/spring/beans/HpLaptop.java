@@ -58,5 +58,7 @@ public class HpLaptop implements Laptop{
 	public void info() {
 		System.out.println("I am "+name + " with holding "+battery.toString()+" having "+processor.toString());
 	}
-		
+	public void init() {
+		System.out.println("Bean created for HpLaptop class ");
+	}
 }
